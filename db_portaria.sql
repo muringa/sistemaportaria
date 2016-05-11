@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 11-Maio-2016 às 21:24
+-- Generation Time: 11-Maio-2016 às 22:12
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS `guardas` (
   `rg` varchar(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `sexo` varchar(1) NOT NULL,
-  `entrada` time NOT NULL,
-  `saida` time NOT NULL,
+  `entrada` varchar(255) NOT NULL,
+  `saida` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`rg`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `visitas` (
   PRIMARY KEY (`numero`),
   KEY `rgVisitante` (`rgVisitante`,`rgGuarda`),
   KEY `rgGuarda` (`rgGuarda`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Constraints for dumped tables
