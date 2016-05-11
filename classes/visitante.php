@@ -16,7 +16,7 @@
 			$stmt = BD::prepare($sql);
 			$stmt->bindParam(':rg', 		$this->rg);
 			$stmt->bindParam(':nome', 		$this->nome);
-			$stmt->bindParam(':sexo', 		$this->sexo;
+			$stmt->bindParam(':sexo', 		$this->sexo);
 			$stmt->bindParam(':telefone', 	$this->telefone);
 			$stmt->bindParam(':empresa', 	$this->empresa);
 		}
@@ -27,7 +27,7 @@
 			$stmt = BD::prepare($sql);
 			$stmt->bindParam(':rg',		 	$this->rg);
 			$stmt->bindParam(':nome', 		$this->nome);
-			$stmt->bindParam(':sexo', 		$this->sexo;
+			$stmt->bindParam(':sexo', 		$this->sexo);
 			$stmt->bindParam(':telefone',	$this->telefone);
 			$stmt->bindParam(':empresa',	$this->empresa);
 		}

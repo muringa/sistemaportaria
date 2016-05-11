@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Maio-2016 às 18:09
+-- Generation Time: 11-Maio-2016 às 21:24
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `guardas` (
   `sexo` varchar(1) NOT NULL,
   `entrada` time NOT NULL,
   `saida` time NOT NULL,
-  `Senha` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`rg`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -59,12 +59,12 @@ CREATE TABLE IF NOT EXISTS `visitantes` (
 
 CREATE TABLE IF NOT EXISTS `visitas` (
   `numero` int(11) NOT NULL AUTO_INCREMENT,
-  `data` date NOT NULL,
+  `data` varchar(255) NOT NULL,
   `nomeVisitante` varchar(255) NOT NULL,
   `rgVisitante` varchar(255) NOT NULL,
   `rgGuarda` varchar(255) NOT NULL,
-  `entrada` time NOT NULL,
-  `saida` timestamp NOT NULL,
+  `entrada` varchar(255) NOT NULL,
+  `saida` varchar(255) NOT NULL,
   `instituicao` varchar(255) NOT NULL,
   `observacao` varchar(255) NOT NULL,
   PRIMARY KEY (`numero`),
@@ -80,8 +80,8 @@ CREATE TABLE IF NOT EXISTS `visitas` (
 -- Limitadores para a tabela `visitas`
 --
 ALTER TABLE `visitas`
-  ADD CONSTRAINT `visitas_ibfk_2` FOREIGN KEY (`rgGuarda`) REFERENCES `guardas` (`rg`),
-  ADD CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`rgVisitante`) REFERENCES `visitantes` (`rg`);
+  ADD CONSTRAINT `visitas_ibfk_1` FOREIGN KEY (`rgVisitante`) REFERENCES `visitantes` (`rg`),
+  ADD CONSTRAINT `visitas_ibfk_2` FOREIGN KEY (`rgGuarda`) REFERENCES `guardas` (`rg`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
