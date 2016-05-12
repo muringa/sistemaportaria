@@ -17,7 +17,7 @@
 		private $senha;
 
 		public function insert(){
-			$sql 	= "INSERT INTO $this->tabela VALUES :rg,:nome,:sexo,:entrada,:saida,:senha";
+			$sql 	= "INSERT INTO $this->tabela VALUES (:rg,:nome,:sexo,:entrada,:saida,:senha)";
 			$stmt 	= BD::prepare($sql);
 			//usa-se $this->rg e não $rg porque se está acessando uma variável global
 			$stmt->bindParam(':rg', 	$this->rg);
@@ -26,6 +26,8 @@
 			$stmt->bindParam('entrada',	$this->entrada);
 			$stmt->bindParam(':saida',	$this->saida);
 			$stmt->bindParam(':senha',	$this->senha);
+
+			return $stmt->execute();
 
 		}
 
