@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
         
     	$(this).ajaxSubmit({
             success:function(){
-                alert("Sucesso!"+ cont);
+                alert("Guarda cadastrado com sucesso!!");
             }
         });
     }
