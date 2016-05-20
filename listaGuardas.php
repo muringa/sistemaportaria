@@ -1,6 +1,11 @@
 <html>
 <head>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<style>
+		#glyph{
+			color:red;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
