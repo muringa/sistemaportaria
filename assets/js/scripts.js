@@ -90,6 +90,8 @@ jQuery(document).ready(function() {
     	$(this).ajaxSubmit({
             success:function(){
                 alert("Guarda cadastrado com sucesso!!");
+                $("#registraGuarda").trigger("reset");
+                $("#acao").val() = "cadastrar";
             }
         });
     }

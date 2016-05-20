@@ -90,7 +90,7 @@
 	   			<td><?php echo $valor->sexo;?></td>
 	   			<td><?php echo $valor->entrada;?></td>
 	   			<td><?php echo $valor->saida;?></td>
-	   			<td><label for="<?php echo $valor->rg;?>" class="glyphicon glyphicon-remove"><button id="<?php echo $valor->rg;?>" style="display: none;" class="excluir"></button></label></td>
+	   			<td><label for="<?php echo $valor->rg;?>" class="glyphicon glyphicon-remove" id="glyph"><button id="<?php echo $valor->rg;?>" style="display: none;" class="excluir"></button></label></td>
 	   		</tr>
 
 	   	<?php
